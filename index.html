@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBA Rowing - Team Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
+            <!-- Top edge glass sheen -->
+            <div class="sidebar-top-sheen"></div>
+
+            <!-- Scrollable content: Logo + Nav -->
+            <div class="sidebar-scroll">
+                
+                <!-- LOGO SECTION -->
+                <div class="logo-section">
+                    <div class="logo-box">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="18" height="18" rx="4" stroke="rgba(237,232,222,0.7)" stroke-width="1.5"/>
+                            <path d="M8 16 C9.5 13 11 11 12 9 C13 7 13.5 6 14.5 5" stroke="#EDE8DE" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="15" cy="4.5" r="1.8" stroke="#EDE8DE" stroke-width="1.5" fill="none"/>
+                            <path d="M7.5 13 Q10 14 12 13 Q14 12 16.5 13" stroke="rgba(237,232,222,0.38)" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <div class="logo-main">IBA Rowing</div>
+                        <div class="logo-sub">Pakistan</div>
+                    </div>
+                </div>
+
+                <!-- NAVIGATION -->
+                <nav class="navbar">
+                    <button class="nav-btn active" data-view="home">Home</button>
+                    <button class="nav-btn" data-view="teams">Teams</button>
+                    <button class="nav-btn" data-view="timetable">Timetable</button>
+                    <button class="nav-btn" data-view="trials">Trials</button>
+                    <button class="nav-btn" data-view="login">Login / Register</button>
+                </nav>
+            </div>
+
+            <!-- FOOTER (always pinned) -->
+            <footer class="sidebar-footer">
+                <div class="footer-icons">
+                    <a href="mailto:ibarowing@gmail.com" class="footer-icon" aria-label="IBA Rowing Email" title="IBA Rowing Email">
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <rect x="2" y="4" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                            <path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/ibarowing" class="footer-icon" aria-label="IBA Rowing on Instagram" title="IBA Rowing on Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <rect x="2" y="2" width="16" height="16" rx="4.5" stroke="currentColor" stroke-width="1.6"/>
+                            <circle cx="10" cy="10" r="3.4" stroke="currentColor" stroke-width="1.6"/>
+                            <circle cx="14.6" cy="5.4" r="0.85" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-copyright">© IBA Rowing Team. All rights reserved.</p>
+            </footer>
+        </aside>
+
+        <!-- RIGHT PANEL - BOAT DIAGRAM -->
+        <div class="boat-hero">
+            <img src="imports/iso_boat2.png" alt="Completed Sculling Shell (5x+) technical diagram" class="boat-image">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
