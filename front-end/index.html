@@ -8,16 +8,9 @@
 </head>
 <body>
     <div class="container">
-        
-        <!-- LEFT SIDEBAR -->
         <aside class="sidebar">
-            <!-- Top edge glass sheen -->
             <div class="sidebar-top-sheen"></div>
-
-            <!-- Scrollable content: Logo + Nav -->
             <div class="sidebar-scroll">
-                
-                <!-- LOGO SECTION -->
                 <div class="logo-section">
                     <div class="logo-box">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -32,8 +25,6 @@
                         <div class="logo-sub">Pakistan</div>
                     </div>
                 </div>
-
-                <!-- NAVIGATION -->
                 <nav class="navbar">
                     <button class="nav-btn active" data-view="home">Home</button>
                     <button class="nav-btn" data-view="teams">Teams</button>
@@ -42,8 +33,6 @@
                     <button class="nav-btn" data-view="login">Login / Register</button>
                 </nav>
             </div>
-
-            <!-- FOOTER (always pinned) -->
             <footer class="sidebar-footer">
                 <div class="footer-icons">
                     <a href="mailto:ibarowing@gmail.com" class="footer-icon" aria-label="IBA Rowing Email" title="IBA Rowing Email">
@@ -64,11 +53,41 @@
             </footer>
         </aside>
 
-        <!-- RIGHT PANEL - BOAT DIAGRAM -->
-        <div class="boat-hero">
-            <img src="../imports/iso_boat2.png" alt="Completed Sculling Shell (5x+) technical diagram" class="boat-image">
-        </div>
+        <main class="right-panel">
+            <img src="../imports/iso_boat2.png" alt="" class="boat-background">
+            <img src="../imports/iso_boat2.png" alt="Completed Sculling Shell (5x+) technical diagram" class="boat-normal">
 
+            <div class="view home-view active">
+            </div>
+
+            <div class="view teams-view">
+                <div class="view-content">
+                    <h2 class="view-title">Team Members</h2>
+                    <div class="view-blur-overlay"></div>
+                </div>
+            </div>
+
+            <div class="view timetable-view">
+                <div class="view-content">
+                    <h2 class="view-title">Race Schedule</h2>
+                    <div class="view-blur-overlay"></div>
+                </div>
+            </div>
+
+            <div class="view trials-view">
+                <div class="view-content">
+                    <h2 class="view-title">Trials</h2>
+                    <div class="view-blur-overlay"></div>
+                </div>
+            </div>
+
+            <div class="view login-view">
+                <div class="view-content">
+                    <h2 class="view-title">Login / Register</h2>
+                    <div class="view-blur-overlay"></div>
+                </div>
+            </div>
+        </main>
     </div>
 
     <script src="script.js"></script>
