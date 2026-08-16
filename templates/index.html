@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IBA Rowing - Team Management</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
     <div class="container">
@@ -54,8 +54,8 @@
         </aside>
 
         <main class="right-panel">
-            <img src="../imports/iso_boat2.png" alt="" class="boat-background">
-            <img src="../imports/iso_boat2.png" alt="Completed Sculling Shell (5x+) technical diagram" class="boat-normal">
+            <img src="../static/imports/iso_boat2.png" alt="" class="boat-background">
+            <img src="../static/imports/iso_boat2.png" alt="Completed Sculling Shell (5x+) technical diagram" class="boat-normal">
 
             <div class="view home-view active">
             </div>
@@ -64,6 +64,20 @@
                 <div class="view-content">
                     <h2 class="view-title">Team Members</h2>
                     <div class="view-blur-overlay"></div>
+                    <div class="members-table-container">
+                        <table class="members-table">
+                            <thead>
+                                <tr>
+                                    <th>ERP ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="team-members-body">
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -90,6 +104,6 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="../static/script.js"></script>
 </body>
 </html>

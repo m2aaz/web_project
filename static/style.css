@@ -1,6 +1,5 @@
-/* ===========================
-   GLOBAL STYLES
-   =========================== */
+
+/* Global Styles */
 
 * {
     margin: 0;
@@ -19,9 +18,7 @@ body {
     background: #EDE8DE;
 }
 
-/* ===========================
-   LAYOUT - MAIN CONTAINER
-   =========================== */
+/* Main Container LAYOUT */
 
 .container {
     display: flex;
@@ -30,9 +27,7 @@ body {
     overflow: hidden;
 }
 
-/* ===========================
-   LEFT SIDEBAR (STATIC)
-   =========================== */
+/* STATIC Left Sidebar */
 
 .sidebar {
     width: 25%;
@@ -70,9 +65,7 @@ body {
     display: none;
 }
 
-/* ===========================
-   LOGO SECTION
-   =========================== */
+/* Logo Section */
 
 .logo-section {
     display: flex;
@@ -115,9 +108,7 @@ body {
     margin-top: 1px;
 }
 
-/* ===========================
-   NAVIGATION
-   =========================== */
+/* Navigation */
 
 .navbar {
     display: flex;
@@ -166,10 +157,7 @@ body {
     background: #EDE8DE;
     box-shadow: 0 3px 16px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.60);
 }
-
-/* ===========================
-   FOOTER
-   =========================== */
+/* Footer */
 
 .sidebar-footer {
     flex-shrink: 0;
@@ -218,9 +206,7 @@ body {
     margin: 0;
 }
 
-/* ===========================
-   RIGHT PANEL
-   =========================== */
+/* Right Panel*/
 
 .right-panel {
     flex: 1;
@@ -233,9 +219,7 @@ body {
     position: relative;
 }
 
-/* ===========================
-   BOAT BACKGROUND
-   =========================== */
+/* Boat Background */
 
 .boat-background {
     position: absolute;
@@ -262,9 +246,7 @@ body {
     z-index: 2;
 }
 
-/* ===========================
-   VIEWS
-   =========================== */
+/* General Views */
 
 .view {
     display: none;
@@ -293,18 +275,59 @@ body {
         transform: translateY(0);
     }
 }
-
-/* ===========================
-   HOME VIEW
-   =========================== */
+/* Home View */
 
 .home-view {
     background: transparent;
 }
 
-/* ===========================
-   OTHER VIEWS
-   =========================== */
+/* TEAMS VIEW */
+
+.members-table-container {
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(237, 232, 222, 0.13);
+    border-radius: 10px;
+    background: rgba(42, 41, 41, 0.9);
+    backdrop-filter: blur(18px) saturate(130%);
+    -webkit-backdrop-filter: blur(18px) saturate(130%);
+    box-shadow: 4px 0 32px rgba(0, 0, 0, 0.22);
+    overscroll-behavior: none;
+}
+
+.members-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.members-table th {
+    background: rgba(42, 41, 41, 0.9);
+    color: #EDE8DE;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid rgba(237, 232, 222, 0.13);
+}
+
+.members-table td {
+    background: #ede8de;
+    color: #2A2118;
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+}
+
+.members-table tr:hover td {
+    background: #f5f5f5;
+}
+
+/* Other Views */
 
 .teams-view,
 .timetable-view,
@@ -318,13 +341,14 @@ body {
     width: 90%;
     max-width: 900px;
     max-height: 85%;
-    background: rgba(255, 255, 255, 0.95);
+    background: #ede8de;
     border-radius: 16px;
     padding: 40px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
     z-index: 10;
     backdrop-filter: blur(0px);
+    overflow: hidden
 }
 
 .view-blur-overlay {
@@ -341,9 +365,7 @@ body {
     border-radius: 16px;
 }
 
-/* ===========================
-   VIEW CONTENT
-   =========================== */
+/* View Content */
 
 .view-title {
     font-size: 28px;
@@ -354,9 +376,7 @@ body {
     z-index: 2;
 }
 
-/* ===========================
-   RESPONSIVE DESIGN
-   =========================== */
+/* Responsive Design */
 
 @media (max-width: 768px) {
     .container {
