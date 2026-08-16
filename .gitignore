@@ -1,3 +1,7 @@
 
-venv
-.vscode
+venv/
+.vscode/
+__pycache__/
+*.pyc
+config.yaml
+.env

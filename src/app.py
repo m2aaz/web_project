@@ -65,3 +65,16 @@ def get_members():
     )
 
     return jsonify(sorted_members)
+
+timetable = {
+    "event_date" : "1/1/2000",
+    "event_name" : "Test Event",
+    "event_start_time" : "8 AM",
+    "event_end_time" : "5 PM",
+    "event_host" : "Random University",
+    "event_category" : "Indoor & Outdoor"
+}
+
+@app.route("/api/timetable", methods=["GET"])
+def get_timetable():
+    return jsonify(timetable)
