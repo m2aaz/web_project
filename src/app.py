@@ -89,3 +89,31 @@ events = [
 def get_timetable():
     return jsonify(events)
 
+trial_participants = [
+    {
+        "erp_id" : 12345,
+        "first_name" : "random",
+        "last_name" : "value",
+        "phone" : "01111111111",
+        "result" : None
+    }, 
+    {
+        "erp_id" : 19191,
+        "first_name" : "rando1m",
+        "last_name" : "value2",
+        "phone" : "02222222222",
+        "result" : None
+    }
+]
+
+@app.route("/api/trials/participants", methods=["GET"])
+def get_trial_participants():
+    return jsonify(trial_participants)
+
+@app.route("/api/trials/result", methods=["GET"])
+def get_trial_results():
+    final_candidates = []
+    for participant in trial_participants:
+        if participant["result"] is not None:
+            final_candidates.append(participant)
+    return jsonify(sorted(final_candidates, key=lambda participant: participant["result"], reverse=True))

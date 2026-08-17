@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../static/css/views.css">
     <link rel="stylesheet" href="../static/css/timetable.css">
     <link rel="stylesheet" href="../static/css/teams.css">
+    <link rel="stylesheet" href="../static/css/trials.css">
     <link rel="stylesheet" href="../static/css/responsive.css">
 </head>
 <body>
@@ -113,8 +114,66 @@
             </div>
 
             <div class="view trials-view">
-                <div class="view-content">
-                    <h2 class="view-title">Trials</h2>
+                <div class="view-content trials-content">
+                    <div class="trials-header">
+                        <h2 class="view-title">Upcoming Trials</h2>
+                    </div>
+                    <div class="trials-list">
+                        <div class="trial-card">
+                            <div class="trial-header">
+                                <div>
+                                    <h3 class="trial-title">500m Trial</h3>
+                                    <span class="trial-type">Rowing Trial</span>
+                                </div>
+                                <span class="trial-status">Registration Open</span>
+                            </div>
+                            <div class="trial-meta">
+                                <div class="trial-meta-item">
+                                    <span class="trial-meta-label">Date</span>
+                                    <span class="trial-meta-value">24 August 2026</span>
+                                </div>
+                                <div class="trial-meta-item">
+                                    <span class="trial-meta-label">Time</span>
+                                    <span class="trial-meta-value">10:00 AM</span>
+                                </div>
+                                <div class="trial-meta-item">
+                                    <span class="trial-meta-label">Location</span>
+                                    <span class="trial-meta-value">MCL-2</span>
+                                </div>
+                            </div>
+                            <div class="trial-actions">
+                                <button class="trial-register-button">Register</button>
+                            </div>
+                            <div class="trial-registration">
+                                <div class="trial-registration-title">Register for 500m Trial</div>
+                                <div class="trial-form">
+                                    <div class="trial-input-box">
+                                        <label for="trial-erp">ERP ID</label>
+                                        <input id="trial-erp" type="text" placeholder="Enter your ERP ID">
+                                    </div>
+                                    <div class="trial-input-box">
+                                        <label for="trial-name">Full Name</label>
+                                        <input id="trial-name" type="text" placeholder="Enter your full name">
+                                    </div>
+                                    <div class="trial-input-box">
+                                        <label for="trial-phone">Phone Number</label>
+                                        <input id="trial-phone" type="tel" placeholder="Enter your phone number">
+                                    </div>
+                                    <button class="trial-confirm-button" type="button">Confirm Registration</button>
+                                </div>
+                                <div class="trial-success">
+                                    <div class="trial-success-icon">
+                                        <svg viewBox="0 0 52 52">
+                                            <circle class="trial-success-circle" cx="26" cy="26" r="24"></circle>
+                                            <path class="trial-success-check" d="M15 27 L22 34 L37 18"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="trial-success-title">Registration Successful</div>
+                                    <div class="trial-success-message">You have been registered for the 500m Trial.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="view-blur-overlay"></div>
                 </div>
             </div>
@@ -131,6 +190,7 @@
     <script src="../static/js/timetable/calendar.js"></script>
     <script src="../static/js/timetable/events.js"></script>
     <script src="../static/js/timetable/calendar_animation.js"></script>
+    <script src="../static/js/trials.js"></script>
     <script src="../static/js/navigation.js"></script>
 </body>
 </html>

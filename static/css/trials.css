@@ -1,0 +1,379 @@
+/* Trials */
+
+.trials-content {
+    max-width: 900px;
+    max-height: 90%;
+    padding: 32px;
+}
+
+.trials-header {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 24px;
+}
+
+.trials-header .view-title {
+    margin-bottom: 0;
+}
+
+/* Trials List */
+
+.trials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Trial Card */
+
+.trial-card {
+    width: 100%;
+    padding: 24px;
+    border-radius: 12px;
+    background: #e2e0da;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    transition:
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
+.trial-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
+}
+
+/* Trial Header */
+
+.trial-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.trial-title {
+    margin: 0;
+    color: #2a2118;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.trial-type {
+    display: block;
+    margin-top: 4px;
+    color: rgba(42, 33, 24, 0.55);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* Status */
+
+.trial-status {
+    flex-shrink: 0;
+    padding: 6px 10px;
+    border-radius: 7px;
+    background: rgba(42, 41, 41, 0.90);
+    color: #ede8de;
+    border: 1px solid rgba(237, 232, 222, 0.13);
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Trial Information */
+
+.trial-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.trial-meta-item {
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(237, 232, 222, 0.55);
+    border: 1px solid rgba(42, 41, 41, 0.10);
+}
+
+.trial-meta-label {
+    display: block;
+    margin-bottom: 4px;
+    color: rgba(42, 33, 24, 0.50);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.trial-meta-value {
+    display: block;
+    color: #2a2118;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Actions */
+
+.trial-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.trial-register-button,
+.trial-confirm-button {
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    background: #2a2929;
+    color: #ede8de;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 150ms ease,
+        color 150ms ease,
+        border-color 150ms ease,
+        transform 100ms ease,
+        box-shadow 150ms ease;
+}
+
+.trial-register-button:hover,
+.trial-confirm-button:hover {
+    background: transparent;
+    color: #2a2118;
+    border-color: #2a2929;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+}
+
+.trial-register-button:active,
+.trial-confirm-button:active {
+    transform: scale(0.96);
+}
+
+/* Registration Form */
+
+.trial-registration {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-8px);
+    transition:
+        max-height 300ms ease,
+        opacity 220ms ease,
+        transform 300ms ease,
+        margin-top 300ms ease;
+}
+
+.trial-card.registration-open .trial-registration {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 24px;
+}
+
+.trial-registration-title {
+    padding-top: 20px;
+    margin-bottom: 22px;
+    border-top: 1px solid rgba(42, 41, 41, 0.12);
+    color: #2a2118;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Form */
+
+.trial-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.trial-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.trial-input-box {
+    position: relative;
+    width: 100%;
+}
+
+.trial-input-box label {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    padding: 0 5px;
+    background: #e2e0da;
+    color: rgba(42, 33, 24, 0.55);
+    font-size: 10px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.trial-input-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 7px;
+    outline: none;
+    background: rgba(237, 232, 222, 0.60);
+    border: 1px solid #bfbfbf;
+    color: #2a2118;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 13px;
+    transition:
+        border-color 150ms ease,
+        box-shadow 150ms ease,
+        background 150ms ease;
+}
+
+.trial-input-box input::placeholder {
+    color: rgba(42, 33, 24, 0.35);
+}
+
+.trial-input-box input:focus {
+    border-color: #2a2929;
+    background: #ede8de;
+    box-shadow: 0 0 0 2px rgba(42, 41, 41, 0.08);
+}
+
+/* Checkbox */
+
+.trial-checkbox-box {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 2px;
+}
+
+.trial-checkbox-box input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    accent-color: #2a2929;
+    cursor: pointer;
+}
+
+.trial-checkbox-box label {
+    color: #2a2118;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Confirm Button */
+
+.trial-confirm-button {
+    align-self: flex-end;
+    margin-top: 2px;
+}
+
+/* Success State */
+
+.trial-success {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0 8px;
+    text-align: center;
+}
+
+.trial-success-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+}
+
+.trial-success-icon svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.trial-success-circle {
+    fill: none;
+    stroke: #2a2929;
+    stroke-width: 2;
+    stroke-dasharray: 151;
+    stroke-dashoffset: 151;
+    animation: trial-success-circle 500ms ease forwards;
+}
+
+.trial-success-check {
+    fill: none;
+    stroke: #2a2929;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 32;
+    stroke-dashoffset: 32;
+    animation: trial-success-check 350ms ease 350ms forwards;
+}
+
+.trial-success-title {
+    color: #2a2118;
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(6px);
+    animation: trial-success-text 300ms ease 600ms forwards;
+}
+
+.trial-success-message {
+    margin-top: 6px;
+    color: rgba(42, 33, 24, 0.55);
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(6px);
+    animation: trial-success-text 300ms ease 700ms forwards;
+}
+
+.trial-registration.registration-success .trial-form {
+    display: none;
+}
+
+.trial-registration.registration-success .trial-registration-title {
+    display: none;
+}
+
+.trial-registration.registration-success .trial-success {
+    display: flex;
+}
+
+@keyframes trial-success-circle {
+    from {
+        stroke-dashoffset: 151;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes trial-success-check {
+    from {
+        stroke-dashoffset: 32;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes trial-success-text {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
