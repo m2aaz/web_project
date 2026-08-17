@@ -66,15 +66,26 @@ def get_members():
 
     return jsonify(sorted_members)
 
-timetable = {
-    "event_date" : "1/1/2000",
-    "event_name" : "Test Event",
-    "event_start_time" : "8 AM",
-    "event_end_time" : "5 PM",
-    "event_host" : "Random University",
-    "event_category" : "Indoor & Outdoor"
-}
+events = [
+    {
+        "id": 1,
+        "title": "IBA Regatta Briefing - Official",
+        "date": "3/8/2026",
+        "start_time": "10:00",
+        "end_time": "11:15",
+        "location": "MCL-2"
+    },
+    {
+        "id": 2,
+        "title": "Team Meeting",
+        "date": "20/8/2026",
+        "start_time": "14:00",
+        "end_time": "15:00",
+        "location": "IBA Main Campus"
+    }
+]
 
-@app.route("/api/timetable", methods=["GET"])
+@app.route("/api/events", methods=["GET"])
 def get_timetable():
-    return jsonify(timetable)
+    return jsonify(events)
+

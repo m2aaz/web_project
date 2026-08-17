@@ -28,5 +28,9 @@ navButtons.forEach(button => {
             normalBoat.style.display = 'none';
         }
 
+        if (viewId == 'timetable') {
+            initializeCalendar()
+        }
+
     });
 });
