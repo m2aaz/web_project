@@ -70,6 +70,7 @@ events = [
     {
         "id": 1,
         "title": "IBA Regatta Briefing - Official",
+        "type": "Meeting",
         "date": "3/8/2026",
         "start_time": "10:00",
         "end_time": "11:15",
@@ -77,11 +78,12 @@ events = [
     },
     {
         "id": 2,
-        "title": "Team Meeting",
-        "date": "20/8/2026",
-        "start_time": "14:00",
-        "end_time": "15:00",
-        "location": "IBA Main Campus"
+        "title": "500m Trial",
+        "type": "Meeting",
+        "date": "24/8/2026",
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "location": "MCL-2"
     }
 ]
 
