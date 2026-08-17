@@ -1,0 +1,88 @@
+
+/* General Views */
+
+.view {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.view.active {
+    display: flex;
+    animation: viewEnter 300ms ease-out;
+}
+
+@keyframes viewEnter {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Home View */
+
+.home-view {
+    background: transparent;
+}
+
+/* Other Views */
+
+.teams-view,
+.timetable-view,
+.trials-view,
+.login-view {
+    background: transparent;
+}
+
+/* View Content */
+
+.view-content {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85%;
+    background: #ede8de;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 10;
+    backdrop-filter: blur(0px);
+    overflow: hidden;
+}
+
+.view-blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(6px) saturate(110%);
+    -webkit-backdrop-filter: blur(6px) saturate(110%);
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 16px;
+}
+
+/* View Title */
+
+.view-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2A2118;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 2;
+}

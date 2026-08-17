@@ -1,0 +1,49 @@
+
+/* Main Container Layout */
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Right Panel */
+
+.right-panel {
+    flex: 1;
+    height: 100vh;
+    background-color: #efeee4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Boat Background */
+
+.boat-background {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin-left: 4%;
+    margin-bottom: 1%;
+    filter: blur(6px);
+    z-index: 1;
+}
+
+.boat-normal {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    margin-left: 4%;
+    margin-bottom: 1%;
+    z-index: 2;
+}
