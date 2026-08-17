@@ -16,6 +16,7 @@
     margin-bottom: 0;
 }
 
+
 /* Trials List */
 
 .trials-list {
@@ -25,6 +26,17 @@
     position: relative;
     z-index: 2;
 }
+
+
+/* Trial Information */
+
+.trial-info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 
 /* Trial Card */
 
@@ -44,6 +56,7 @@
 .trial-card:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
 }
+
 
 /* Trial Header */
 
@@ -70,6 +83,7 @@
     letter-spacing: 0.3px;
 }
 
+
 /* Status */
 
 .trial-status {
@@ -83,6 +97,7 @@
     font-weight: 600;
     white-space: nowrap;
 }
+
 
 /* Trial Information */
 
@@ -117,75 +132,60 @@
     font-weight: 600;
 }
 
-/* Actions */
 
-.trial-actions {
+/* No Trials */
+
+.no-trials {
     display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px 32px;
+    border-radius: 12px;
+    background: #e2e0da;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    color: rgba(42, 33, 24, 0.65);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
 }
 
-.trial-register-button,
-.trial-confirm-button {
-    padding: 10px 20px;
-    border-radius: 7px;
-    border: 1px solid transparent;
-    background: #2a2929;
-    color: #ede8de;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition:
-        background 150ms ease,
-        color 150ms ease,
-        border-color 150ms ease,
-        transform 100ms ease,
-        box-shadow 150ms ease;
+.no-trials::before {
+    content: "!";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid rgba(42, 33, 24, 0.50);
+    border-radius: 50%;
+    color: rgba(42, 33, 24, 0.65);
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
 }
 
-.trial-register-button:hover,
-.trial-confirm-button:hover {
-    background: transparent;
-    color: #2a2118;
-    border-color: #2a2929;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
-}
 
-.trial-register-button:active,
-.trial-confirm-button:active {
-    transform: scale(0.96);
-}
+/* Registration Card */
 
-/* Registration Form */
-
-.trial-registration {
-    max-height: 0;
-    opacity: 0;
+.trial-registration-card {
+    width: 100%;
+    padding: 24px;
+    border-radius: 12px;
+    background: #e2e0da;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
     overflow: hidden;
-    transform: translateY(-8px);
-    transition:
-        max-height 300ms ease,
-        opacity 220ms ease,
-        transform 300ms ease,
-        margin-top 300ms ease;
-}
-
-.trial-card.registration-open .trial-registration {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-    margin-top: 24px;
 }
 
 .trial-registration-title {
-    padding-top: 20px;
     margin-bottom: 22px;
-    border-top: 1px solid rgba(42, 41, 41, 0.12);
     color: #2a2118;
     font-size: 16px;
     font-weight: 700;
 }
+
 
 /* Form */
 
@@ -244,49 +244,40 @@
     box-shadow: 0 0 0 2px rgba(42, 41, 41, 0.08);
 }
 
-/* Checkbox */
-
-.trial-checkbox-box {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    margin-top: 2px;
-}
-
-.trial-checkbox-box input {
-    width: 15px;
-    height: 15px;
-    margin: 0;
-    accent-color: #2a2929;
-    cursor: pointer;
-}
-
-.trial-checkbox-box label {
-    color: #2a2118;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-}
 
 /* Confirm Button */
 
 .trial-confirm-button {
     align-self: flex-end;
     margin-top: 2px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    background: #2a2929;
+    color: #ede8de;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 150ms ease,
+        color 150ms ease,
+        border-color 150ms ease,
+        transform 100ms ease,
+        box-shadow 150ms ease;
 }
 
-/* No Trials */
-
-.no-trials {
-    padding: 32px;
-    border-radius: 12px;
-    background: #e2e0da;
-    border: 1px solid #bfbfbf;
-    color: rgba(42, 33, 24, 0.60);
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
+.trial-confirm-button:hover {
+    background: transparent;
+    color: #2a2118;
+    border-color: #2a2929;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
 }
+
+.trial-confirm-button:active {
+    transform: scale(0.96);
+}
+
 
 /* Success State */
 
@@ -350,22 +341,29 @@
     animation: trial-success-text 300ms ease 700ms forwards;
 }
 
-.trial-registration.registration-success .trial-form {
+
+/* Success State Activation */
+
+.trial-registration-card.registration-success .trial-form {
     display: none;
 }
 
-.trial-registration.registration-success .trial-registration-title {
+.trial-registration-card.registration-success .trial-registration-title {
     display: none;
 }
 
-.trial-registration.registration-success .trial-success {
+.trial-registration-card.registration-success .trial-success {
     display: flex;
 }
+
+
+/* Success Animations */
 
 @keyframes trial-success-circle {
     from {
         stroke-dashoffset: 151;
     }
+
     to {
         stroke-dashoffset: 0;
     }
@@ -375,6 +373,7 @@
     from {
         stroke-dashoffset: 32;
     }
+
     to {
         stroke-dashoffset: 0;
     }
@@ -385,6 +384,7 @@
         opacity: 0;
         transform: translateY(6px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

@@ -79,7 +79,7 @@ events = [
     {
         "id": 2,
         "title": "500m Trial",
-        "type": "Meeting",
+        "type": "Trial",
         "date": "24/8/2026",
         "start_time": "10:00",
         "end_time": "11:00",
