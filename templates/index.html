@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="../static/css/teams.css">
     <link rel="stylesheet" href="../static/css/trials.css">
     <link rel="stylesheet" href="../static/css/responsive.css">
+    <link rel="stylesheet" href="../static/css/login.css">
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
             <div class="sidebar-top-sheen"></div>
+
             <div class="sidebar-scroll">
                 <div class="logo-section">
                     <div class="logo-box">
@@ -27,11 +29,13 @@
                             <path d="M7.5 13 Q10 14 12 13 Q14 12 16.5 13" stroke="rgba(237,232,222,0.38)" stroke-width="1.1" stroke-linecap="round" fill="none"/>
                         </svg>
                     </div>
+
                     <div class="logo-text">
                         <div class="logo-main">IBA Rowing</div>
                         <div class="logo-sub">Pakistan</div>
                     </div>
                 </div>
+
                 <nav class="navbar">
                     <button class="nav-btn active" data-view="home">Home</button>
                     <button class="nav-btn" data-view="teams">Teams</button>
@@ -40,6 +44,7 @@
                     <button class="nav-btn" data-view="login">Login / Register</button>
                 </nav>
             </div>
+
             <footer class="sidebar-footer">
                 <div class="footer-icons">
                     <a href="mailto:ibarowing@gmail.com" class="footer-icon" aria-label="IBA Rowing Email" title="IBA Rowing Email">
@@ -48,6 +53,7 @@
                             <path d="M2 7l8 5 8-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
                         </svg>
                     </a>
+
                     <a href="https://instagram.com/ibarowing" class="footer-icon" aria-label="IBA Rowing on Instagram" title="IBA Rowing on Instagram" target="_blank" rel="noopener noreferrer">
                         <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
                             <rect x="2" y="2" width="16" height="16" rx="4.5" stroke="currentColor" stroke-width="1.6"/>
@@ -56,6 +62,7 @@
                         </svg>
                     </a>
                 </div>
+
                 <p class="footer-copyright">© IBA Rowing Team. All rights reserved.</p>
             </footer>
         </aside>
@@ -64,13 +71,17 @@
             <img src="../static/imports/iso_boat2.png" alt="" class="boat-background">
             <img src="../static/imports/iso_boat2.png" alt="Completed Sculling Shell (5x+) technical diagram" class="boat-normal">
 
+            <!-- Home -->
             <div class="view home-view active">
             </div>
 
+            <!-- Teams -->
             <div class="view teams-view">
                 <div class="view-content">
                     <h2 class="view-title">Team Members</h2>
+
                     <div class="view-blur-overlay"></div>
+
                     <div class="members-table-container">
                         <table class="members-table">
                             <thead>
@@ -81,6 +92,7 @@
                                     <th>Status</th>
                                 </tr>
                             </thead>
+
                             <tbody id="team-members-body">
                             </tbody>
                         </table>
@@ -88,16 +100,17 @@
                 </div>
             </div>
 
+            <!-- Timetable -->
             <div class="view timetable-view">
                 <div class="view-content timetable-content">
                     <div class="view-blur-overlay"></div>
-            
+
                     <div class="calendar-header">
                         <button class="calendar-nav" id="previous-month">&lt;</button>
                         <h2 class="view-title" id="calendar-month">August 2026</h2>
                         <button class="calendar-nav" id="next-month">&gt;</button>
                     </div>
-            
+
                     <div class="calendar-weekdays">
                         <div>MON</div>
                         <div>TUE</div>
@@ -107,97 +120,305 @@
                         <div>SAT</div>
                         <div>SUN</div>
                     </div>
-            
+
                     <div class="calendar-grid" id="calendar-grid">
                     </div>
                 </div>
             </div>
 
+            <!-- Trials -->
             <div class="view trials-view">
                 <div class="view-content trials-content">
                     <div class="trials-header">
                         <h2 class="view-title">Upcoming Trials</h2>
                     </div>
-                        <div class="trials-list">
-                            <div class="trial-info-container"></div>
-                        
-                            <div class="trial-registration-card">
-                                <div class="trial-registration-title">
-                                    Register for Trial
+
+                    <div class="trials-list">
+                        <div class="trial-info-container"></div>
+
+                        <div class="trial-registration-card">
+                            <div class="trial-registration-title">
+                                Register for Trial
+                            </div>
+
+                            <div class="trial-form">
+                                <div class="trial-input-box">
+                                    <label>ERP ID</label>
+                                    <input type="text" placeholder="Enter your ERP ID">
                                 </div>
-                        
-                                <div class="trial-form">
+
+                                <div class="trial-form-row">
                                     <div class="trial-input-box">
-                                        <label>ERP ID</label>
-                                        <input type="text" placeholder="Enter your ERP ID">
+                                        <label>First Name</label>
+                                        <input type="text" placeholder="Enter your first name">
                                     </div>
-                        
-                                    <div class="trial-form-row">
-                                        <div class="trial-input-box">
-                                            <label>First Name</label>
-                                            <input type="text" placeholder="Enter your first name">
-                                        </div>
-                        
-                                        <div class="trial-input-box">
-                                            <label>Last Name</label>
-                                            <input type="text" placeholder="Enter your last name">
-                                        </div>
-                                    </div>
-                        
+
                                     <div class="trial-input-box">
-                                        <label>Phone Number</label>
-                                        <input type="tel" placeholder="Enter your phone number">
+                                        <label>Last Name</label>
+                                        <input type="text" placeholder="Enter your last name">
                                     </div>
-                        
-                                    <button class="trial-confirm-button" type="button">
-                                        Register
-                                    </button>
                                 </div>
-                        
-                                <div class="trial-success">
-                                    <div class="trial-success-icon">
-                                        <svg viewBox="0 0 52 52">
-                                            <circle
-                                                class="trial-success-circle"
-                                                cx="26"
-                                                cy="26"
-                                                r="24">
-                                            </circle>
-                                            <path
-                                                class="trial-success-check"
-                                                d="M15 27 L22 34 L37 18">
-                                            </path>
-                                        </svg>
-                                    </div>
-                        
-                                    <div class="trial-success-title">
-                                        Registration Successful
-                                    </div>
-                        
-                                    <div class="trial-success-message">
-                                        You have been registered successfully.
-                                    </div>
+
+                                <div class="trial-input-box">
+                                    <label>Phone Number</label>
+                                    <input type="tel" placeholder="Enter your phone number">
+                                </div>
+
+                                <button class="trial-confirm-button" type="button">
+                                    Register
+                                </button>
+                            </div>
+
+                            <div class="trial-success">
+                                <div class="trial-success-icon">
+                                    <svg viewBox="0 0 52 52">
+                                        <circle
+                                            class="trial-success-circle"
+                                            cx="26"
+                                            cy="26"
+                                            r="24">
+                                        </circle>
+
+                                        <path
+                                            class="trial-success-check"
+                                            d="M15 27 L22 34 L37 18">
+                                        </path>
+                                    </svg>
+                                </div>
+
+                                <div class="trial-success-title">
+                                    Registration Successful
+                                </div>
+
+                                <div class="trial-success-message">
+                                    You have been registered successfully.
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="view-blur-overlay"></div>
+            </div>
+
+            <!-- Login / Register -->
+            <div class="view login-view">
+                <div class="view-content login-content">
+
                     <div class="view-blur-overlay"></div>
+
+                    <div class="auth-container">
+
+                        <!-- Brand -->
+                        <div class="auth-brand">
+                            <div class="auth-logo">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect
+                                        x="3"
+                                        y="3"
+                                        width="18"
+                                        height="18"
+                                        rx="4"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                    />
+
+                                    <path
+                                        d="M8 16 C9.5 13 11 11 12 9 C13 7 13.5 6 14.5 5"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                    />
+
+                                    <circle
+                                        cx="15"
+                                        cy="4.5"
+                                        r="1.8"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        fill="none"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Heading -->
+                        <div class="auth-heading">
+                            <h2>Welcome to IBA Rowing</h2>
+                            <p>Sign in to access your team account.</p>
+                        </div>
+
+                        <!-- Login / Register Toggle -->
+                        <div class="auth-toggle">
+                            <button
+                                class="auth-toggle-button active"
+                                type="button"
+                                data-auth="login"
+                            >
+                                Login
+                            </button>
+
+                            <button
+                                class="auth-toggle-button"
+                                type="button"
+                                data-auth="register"
+                            >
+                                Register
+                            </button>
+                        </div>
+
+                        <!-- Login Form -->
+                        <form class="auth-form" id="login-form">
+
+                            <div class="auth-input-box">
+                                <label for="login-erp">ERP ID</label>
+
+                                <input
+                                    id="login-erp"
+                                    type="text"
+                                    placeholder="Enter your ERP ID"
+                                    autocomplete="username"
+                                >
+                            </div>
+
+                            <div class="auth-input-box">
+                                <label for="login-password">Password</label>
+
+                                <input
+                                    id="login-password"
+                                    type="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                >
+                            </div>
+
+                            <div class="auth-form-options">
+                                <label class="remember-option">
+                                    <input type="checkbox">
+                                    <span>Remember me</span>
+                                </label>
+
+                                <button
+                                    type="button"
+                                    class="forgot-password"
+                                >
+                                    Forgot password?
+                                </button>
+                            </div>
+
+                            <button
+                                class="auth-submit-button"
+                                type="submit"
+                            >
+                                Sign in
+                            </button>
+
+                        </form>
+
+                        <!-- Register Form -->
+                        <form class="auth-form hidden" id="register-form">
+
+                            <div class="auth-form-row">
+
+                                <div class="auth-input-box">
+                                    <label for="register-first-name">
+                                        First Name
+                                    </label>
+
+                                    <input
+                                        id="register-first-name"
+                                        type="text"
+                                        placeholder="First name"
+                                    >
+                                </div>
+
+                                <div class="auth-input-box">
+                                    <label for="register-last-name">
+                                        Last Name
+                                    </label>
+
+                                    <input
+                                        id="register-last-name"
+                                        type="text"
+                                        placeholder="Last name"
+                                    >
+                                </div>
+
+                            </div>
+
+                            <div class="auth-input-box">
+                                <label for="register-erp">ERP ID</label>
+
+                                <input
+                                    id="register-erp"
+                                    type="text"
+                                    placeholder="Enter your ERP ID"
+                                >
+                            </div>
+
+                            <div class="auth-input-box">
+                                <label for="register-phone">Phone Number</label>
+
+                                <input
+                                    id="register-phone"
+                                    type="tel"
+                                    placeholder="Enter your phone number"
+                                >
+                            </div>
+
+                            <div class="auth-input-box">
+                                <label for="register-password">Password</label>
+
+                                <input
+                                    id="register-password"
+                                    type="password"
+                                    placeholder="Create a password"
+                                    autocomplete="new-password"
+                                >
+                            </div>
+
+                            <button
+                                class="auth-submit-button"
+                                type="submit"
+                            >
+                                Create account
+                            </button>
+
+                        </form>
+
+                        <!-- Divider -->
+                        <div class="auth-divider">
+                            <span>OR</span>
+                        </div>
+
+                        <!-- External Login -->
+                        <button
+                            class="auth-provider-button"
+                            type="button"
+                        >
+                            <span class="provider-icon">G</span>
+                            Continue with Google
+                        </button>
+
+                        <!-- Footer -->
+                        <p class="auth-terms">
+                            By continuing, you agree to the IBA Rowing
+                            <span>Terms of Service</span> and
+                            <span>Privacy Policy</span>.
+                        </p>
+
+                    </div>
                 </div>
             </div>
 
-            <div class="view login-view">
-                <div class="view-content">
-                    <h2 class="view-title">Login / Register</h2>
-                    <div class="view-blur-overlay"></div>
-                </div>
-            </div>
         </main>
     </div>
+
+    <script src="../static/js/navigation.js"></script>
     <script src="../static/js/teams.js"></script>
     <script src="../static/js/timetable/calendar.js"></script>
     <script src="../static/js/timetable/events.js"></script>
     <script src="../static/js/timetable/calendar_animation.js"></script>
     <script src="../static/js/trials.js"></script>
-    <script src="../static/js/navigation.js"></script>
 </body>
 </html>
