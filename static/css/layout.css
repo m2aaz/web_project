@@ -1,10 +1,9 @@
-
 /* Main Container Layout */
 
 .container {
     display: flex;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -12,7 +11,7 @@
 
 .right-panel {
     flex: 1;
-    height: 100vh;
+    height: 100%;
     background-color: #efeee4;
     display: flex;
     align-items: center;
@@ -23,28 +22,21 @@
 
 /* Boat Background */
 
-.boat-background {
-    position: absolute;
-    width: 95%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-    margin-left: 4%;
-    margin-bottom: 1%;
-    filter: blur(6px);
-    z-index: 1;
-}
-
+.boat-background,
 .boat-normal {
     position: absolute;
     width: 95%;
     height: 100%;
     object-fit: contain;
-    object-position: center;
-    display: block;
     margin-left: 4%;
     margin-bottom: 1%;
-    z-index: 2;
 }
 
+.boat-background {
+    filter: blur(6px);
+    z-index: 1;
+}
+
+.boat-normal {
+    z-index: 2;
+}

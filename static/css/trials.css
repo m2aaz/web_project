@@ -16,7 +16,6 @@
     margin-bottom: 0;
 }
 
-
 /* Trials List */
 
 .trials-list {
@@ -27,7 +26,6 @@
     z-index: 2;
 }
 
-
 /* Trial Information */
 
 .trial-info-container {
@@ -36,7 +34,6 @@
     flex-direction: column;
     gap: 16px;
 }
-
 
 /* Trial Card */
 
@@ -48,15 +45,12 @@
     border: 1px solid #bfbfbf;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
     overflow: hidden;
-    transition:
-        box-shadow 180ms ease,
-        transform 180ms ease;
+    transition: box-shadow 180ms ease;
 }
 
 .trial-card:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14);
 }
-
 
 /* Trial Header */
 
@@ -83,7 +77,6 @@
     letter-spacing: 0.3px;
 }
 
-
 /* Status */
 
 .trial-status {
@@ -97,7 +90,6 @@
     font-weight: 600;
     white-space: nowrap;
 }
-
 
 /* Trial Information */
 
@@ -132,7 +124,6 @@
     font-weight: 600;
 }
 
-
 /* No Trials */
 
 .no-trials {
@@ -166,7 +157,6 @@
     flex-shrink: 0;
 }
 
-
 /* Registration Card */
 
 .trial-registration-card {
@@ -185,7 +175,6 @@
     font-size: 16px;
     font-weight: 700;
 }
-
 
 /* Form */
 
@@ -244,7 +233,6 @@
     box-shadow: 0 0 0 2px rgba(42, 41, 41, 0.08);
 }
 
-
 /* Confirm Button */
 
 .trial-confirm-button {
@@ -277,7 +265,6 @@
 .trial-confirm-button:active {
     transform: scale(0.96);
 }
-
 
 /* Success State */
 
@@ -341,7 +328,6 @@
     animation: trial-success-text 300ms ease 700ms forwards;
 }
 
-
 /* Success State Activation */
 
 .trial-registration-card.registration-success .trial-form {
@@ -356,14 +342,12 @@
     display: flex;
 }
 
-
 /* Success Animations */
 
 @keyframes trial-success-circle {
     from {
         stroke-dashoffset: 151;
     }
-
     to {
         stroke-dashoffset: 0;
     }
@@ -373,7 +357,6 @@
     from {
         stroke-dashoffset: 32;
     }
-
     to {
         stroke-dashoffset: 0;
     }
@@ -384,7 +367,6 @@
         opacity: 0;
         transform: translateY(6px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);

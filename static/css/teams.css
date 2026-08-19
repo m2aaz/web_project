@@ -1,4 +1,3 @@
-
 /* Teams View */
 
 .members-table-container {
@@ -21,8 +20,6 @@
     width: 100%;
     border-collapse: collapse;
     font-size: 14px;
-    position: relative;
-    z-index: 2;
 }
 
 .members-table th {

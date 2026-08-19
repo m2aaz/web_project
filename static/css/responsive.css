@@ -1,8 +1,6 @@
-
 /* Responsive Design */
 
 @media (max-width: 768px) {
-
     .container {
         flex-direction: column;
     }
@@ -25,7 +23,6 @@
 }
 
 @media (max-width: 480px) {
-
     .logo-main {
         font-size: 14px;
     }
@@ -59,4 +56,3 @@
         padding: 16px;
     }
 }
-

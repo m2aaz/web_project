@@ -1,4 +1,3 @@
-
 /* General Views */
 
 .view {
@@ -23,26 +22,10 @@
         opacity: 0;
         transform: translateY(10px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Home View */
-
-.home-view {
-    background: transparent;
-}
-
-/* Other Views */
-
-.teams-view,
-.timetable-view,
-.trials-view,
-.login-view {
-    background: transparent;
 }
 
 /* View Content */
@@ -56,10 +39,8 @@
     border-radius: 16px;
     padding: 40px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    overflow-y: auto;
-    z-index: 10;
-    backdrop-filter: blur(0px);
     overflow: hidden;
+    z-index: 10;
 }
 
 .view-blur-overlay {
